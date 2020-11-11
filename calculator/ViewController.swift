@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let gradientLayer = CAGradientLayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.black.cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        // to insert layer at bottom so that it doesnt hide labels on top
     }
 
 
